@@ -141,15 +141,15 @@ if __name__ == '__main__':
         # Create the job that will run the tasks.
         create_job(batch_client, job_id, pool_id)
 
-        for year in range(2001, 2009):
-            command = "python /src/tiny_spacenet.py wasbs://demo@charmatzis.blob.core.windows.net/ --root_uri wasbs://demo@charmatzisdata.blob.core.windows.net/results"
-            add_task(
+        
+        command = "python /src/tiny_spacenet.py wasbs://demo@charmatzis.blob.core.windows.net/ --root_uri wasbs://demo@charmatzisdata.blob.core.windows.net/results"
+        add_task(
                 batch_service_client=batch_client,
                 image_name=image_name,
                 image_version=image_version,
                 job_id=job_id,
                 command=command,
-                name='tiny_spacenet{0}'.format(year))
+                name='tiny_spacenet')
 
         # Pause execution until tasks reach Completed state.
         wait_for_tasks_to_complete(batch_client, job_id, datetime.timedelta(hours=2))

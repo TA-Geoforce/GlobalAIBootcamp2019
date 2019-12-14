@@ -1,9 +1,9 @@
-STORAGE_ACCOUNT_NAME = " AIBootcamp2019storageaccount"
+STORAGE_ACCOUNT_NAME = " aibootcamp2019sa "
 STORAGE_ACCOUNT_KEY = ""
 
-BATCH_ACCOUNT_NAME = "AIBootcamp2019batchaccount"
+BATCH_ACCOUNT_NAME = "aibootcamp2019ba"
 BATCH_ACCOUNT_KEY = ""
-BATCH_ACCOUNT_URL = "https://AIBootcamp2019batchaccount.westeurope.batch.azure.com"
+BATCH_ACCOUNT_URL = "https://aibootcamp2019ba.westeurope.batch.azure.com"
 
 ACR_LOGINSERVER = "athensaibootcampdemo.azurecr.io"
 ACR_USERNAME = "athensaibootcampdemo"

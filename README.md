@@ -30,7 +30,7 @@ az group create \
 ```
 az storage account create \
     --resource-group AIBootcamp2019 \
-    --name AIBootcamp2019storageaccount \
+    --name aibootcamp2019sa \
     --location westeurope\
     --sku Standard_LRS
 ```
@@ -38,8 +38,8 @@ az storage account create \
 ### Create a Batch account
 ```
 az batch account create \
-    --name AIBootcamp2019batchaccount \
-    --storage-account AIBootcamp2019storageaccount \
+    --name aibootcamp2019sa \
+    --storage-account aibootcamp2019sa \
     --resource-group AIBootcamp2019 \
     --location westeurope
 ```
@@ -48,14 +48,14 @@ az batch account create \
 ### Log in my batch account
 ```
 az batch account login \
-    --name AIBootcamp2019batchaccount \
+    --name aibootcamp2019sa \
     --resource-group AIBootcamp2019 \
     --shared-key-auth
 ```
 
 ### Delete the pool
 ```
-az batch pool delete --pool-id mypool
+az batch pool delete --pool-id {pool name}
 ```
 
 
